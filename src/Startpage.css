@@ -1,0 +1,316 @@
+@charset "UTF-8";
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 14px;
+}
+.topContainer .topContainerHeading {
+  font-family: "Playball";
+  font-size: 27px;
+  padding-top: 5px;
+  font-weight: 400;
+  line-height: 22.63px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.topContainer button.createButton {
+  background: #f8d447;
+  opacity: 0.5;
+  font-family: SF Pro;
+  font-size: 15px;
+  font-weight: 590;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  border-radius: 30px;
+  padding: 8px 10px;
+  border: none;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topContainer button.createButton.active {
+  opacity: 1;
+}
+
+#footer {
+  position: fixed;
+  bottom: 13px;
+  padding: 0 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#footer .formatSelection .formatSelectorText {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 590;
+  line-height: 15.51px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #1d1d1f;
+  margin-bottom: 10px;
+}
+#footer .formatSelection .formatSelectorButtonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+#footer .formatSelection .buttonCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+#footer .formatSelection .buttonCon .btnConE {
+  padding: 2px;
+}
+#footer .formatSelection .buttonCon .btnConE.active {
+  outline: #1d1d1f 2px solid;
+  border-radius: 50%;
+  max-height: 59px;
+  margin-bottom: 4px;
+}
+#footer .formatSelection .buttonCon button {
+  min-width: 55px;
+  min-height: 55px;
+  border-radius: 50%;
+  border: none;
+  background-color: #cd7575;
+}
+#footer .formatSelection .buttonCon button img {
+  position: relative;
+  right: -22px;
+  bottom: -22px;
+  display: inline-block;
+}
+#footer .formatSelection .buttonCon .buttonConText {
+  font-size: 12px;
+  font-weight: 510;
+  line-height: 14.32px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #1d1d1f;
+}
+#footer .lowerFunctions {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  max-width: 450px;
+  min-width: 400px;
+}
+#footer .lowerFunctions .uploadButton {
+  background: #eeecf0;
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  padding: 4px;
+  align-items: center;
+  width: 100%;
+  gap: 7px;
+}
+#footer .lowerFunctions .uploadButton .hook {
+  position: relative;
+  right: -11px;
+  bottom: -14px;
+  display: inline-block;
+}
+#footer .lowerFunctions .uploadButton.languageButton {
+  width: auto;
+  padding: 0px;
+}
+#footer .lowerFunctions .uploadButton.languageButton .svgContainerLang {
+  padding: 12px;
+}
+#footer .lowerFunctions .uploadButton.languageButton .svgContainer {
+  background-color: #eeecf0;
+}
+#footer .lowerFunctions .uploadButton .svgContainer {
+  background-color: #fff;
+  padding: 9px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .lowerFunctions .uploadButton .uploadText {
+  font-size: 10px;
+  font-weight: 510;
+  line-height: 11.93px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #959397;
+  text-transform: uppercase;
+  margin-bottom: 1px;
+}
+#footer .lowerFunctions .uploadButton .uploadTextSecond {
+  font-size: 13px;
+  font-weight: 590;
+  line-height: 15.51px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #1d1d1f;
+}
+#footer .lowerFunctions .uploadButton .uploadTextSecond.uploadedText {
+  color: #0372e4;
+  width: 75px; /* Setze eine feste Breite für das Container-Element */
+  white-space: nowrap; /* Verhindert Zeilenumbrüche */
+  overflow: hidden; /* Verhindert das Anzeigen von Text, der über das Element hinausgeht */
+  text-overflow: ellipsis;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  transition: 250ms all cubic-bezier(0, 0, 0.4, 0.95);
+}
+
+.modal {
+  position: fixed;
+  bottom: 0;
+  background: #efeff2;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  transition: all 250ms cubic-bezier(0, 0, 0.4, 0.95);
+  border-radius: 24px 24px 0 0 !important;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.modal .doneButton {
+  position: absolute;
+  top: 11px;
+  right: 18px;
+  background: #d4d4d7;
+  border-radius: 30px;
+  padding: 8px 10px;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 590;
+  line-height: 12.57px;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #1d1d1f;
+}
+.modal .paragraphHeading {
+  font-size: 17px;
+  font-weight: 590;
+  line-height: 14.25px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #1d1d1f;
+  margin-top: 18px;
+}
+.modal .styleDes {
+  font-size: 13px;
+  font-weight: 410;
+  line-height: 15.51px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #959397;
+  margin-top: 19px;
+}
+.modal .styleSelectorButtonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 23px;
+}
+.modal .styleSelectorButtonContainer .styleButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.modal .styleSelectorButtonContainer .styleButtonContainer .btnConE {
+  padding: 2px;
+}
+.modal .styleSelectorButtonContainer .styleButtonContainer .btnConE.active {
+  outline: #1d1d1f 2px solid;
+  border-radius: 50%;
+  max-height: 59px;
+  margin-bottom: 4px;
+}
+.modal .styleSelectorButtonContainer .styleButtonContainer button {
+  min-width: 55px;
+  min-height: 55px;
+  border-radius: 50%;
+  border: none;
+  background-color: #cd7575;
+}
+.modal .styleSelectorButtonContainer .styleButtonContainer button img {
+  position: relative;
+  right: -22px;
+  bottom: -22px;
+  display: inline-block;
+}
+.modal .styleSelectorButtonContainer .styleButtonContainer .buttonConText {
+  font-size: 12px;
+  font-weight: 510;
+  line-height: 14.32px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #1d1d1f;
+}
+
+.modalOpen {
+  top: 490px;
+}
+
+@media only screen and (max-width: 420px) {
+  #footer .formatSelection .formatSelectorButtonContainer {
+    gap: 15px;
+  }
+  #footer .lowerFunctions {
+    gap: 10px;
+    min-width: 380px;
+  }
+}
+@media only screen and (max-width: 403px) {
+  #footer .formatSelection .formatSelectorButtonContainer {
+    gap: 13px;
+  }
+  #footer .lowerFunctions {
+    gap: 9px;
+    min-width: 360px;
+  }
+}
+@media only screen and (max-width: 385px) {
+  #footer .formatSelection .formatSelectorButtonContainer {
+    gap: 10px;
+  }
+  #footer .lowerFunctions {
+    gap: 6px;
+    min-width: 330px;
+  }
+}/*# sourceMappingURL=Startpage.css.map */
