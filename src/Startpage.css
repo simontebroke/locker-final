@@ -18,7 +18,6 @@
 .topContainer button.createButton {
   background: #f8d447;
   opacity: 0.5;
-  font-family: SF Pro;
   font-size: 15px;
   font-weight: 590;
   text-align: center;
@@ -32,6 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #1d1d1f;
 }
 .topContainer button.createButton.active {
   opacity: 1;
