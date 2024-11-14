@@ -184,7 +184,6 @@
   position: fixed;
   bottom: 0;
   background: #efeff2;
-  padding-bottom: 49px;
 
   top: 100%;
   left: 0;
@@ -279,7 +278,7 @@
   }
 }
 .modalOpen {
-  top: 490px;
+  top: calc(100vh - 490px);
 }
 
 @media only screen and (max-width: 420px) {
