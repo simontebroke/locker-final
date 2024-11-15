@@ -399,14 +399,9 @@ body {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
-.finishModal .fixedContainer {
-  width: calc(100vw - 40px);
-  position: relative;
-  bottom: 16px;
-}
 
 .createModalOpen {
-  top: calc(100vh - 435px);
+  top: calc(100vh - 490px);
 }
 
 @media only screen and (max-width: 420px) {
