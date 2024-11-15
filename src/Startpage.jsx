@@ -281,21 +281,24 @@ function Startpage() {
         <button className="closeButton" onClick={toggleFinishModal}>
           <img src="/x.svg" alt="x" />
         </button>
-        <div className="imgContainer">
-          <img src="./bdrprs.png" alt="Result" />
+        <div className="fixedContainer">
+          <div className="imgContainer">
+            <img src="./bdrprs.png" alt="Result" />
+          </div>
+          <p className="firstParagraph">
+            Your Presentation <br />
+            <span>is ready</span>
+          </p>
+          <p className="downloadText">Download now</p>
+          <button className="downloadButton">
+            <img src="/cloud.svg" alt="Download" />
+            <p className="downloadText">Download</p>
+          </button>
+          <p className="downloadDes">
+            Your pdf document has been transformed into a brand new
+            presentation.
+          </p>
         </div>
-        <p className="firstParagraph">
-          Your Presentation <br />
-          <span>is ready</span>
-        </p>
-        <p className="downloadText">Download now</p>
-        <button className="downloadButton">
-          <img src="/cloud.svg" alt="Download" />
-          <p className="downloadText">Download</p>
-        </button>
-        <p className="downloadDes">
-          Your pdf document has been transformed into a brand new presentation.
-        </p>
       </div>
     </>
   );

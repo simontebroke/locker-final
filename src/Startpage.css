@@ -308,7 +308,6 @@ body {
   bottom: 0;
   top: 100%;
   background: linear-gradient(180deg, rgba(230, 220, 255, 0) 0%, rgba(218, 213, 233, 0.43) 23.83%, rgba(215, 196, 249, 0.9) 85.44%);
-  height: 446px !important;
   left: 0;
   right: 0;
   z-index: 20;
@@ -399,6 +398,11 @@ body {
   text-underline-position: from-font;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+}
+.finishModal .fixedContainer {
+  width: calc(100vw - 40px);
+  position: fixed;
+  bottom: 16px;
 }
 
 .createModalOpen {
