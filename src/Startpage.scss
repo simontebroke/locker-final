@@ -281,6 +281,127 @@
   top: calc(100vh - 310px);
 }
 
+body {
+  transition: all 250ms cubic-bezier(0, 0, 0.4, 0.95);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.finishOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  transition: 250ms all cubic-bezier(0, 0, 0.4, 0.95);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.finishModal {
+  position: fixed;
+  bottom: 0;
+  top: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(230, 220, 255, 0) 0%,
+    rgba(218, 213, 233, 0.43) 23.83%,
+    rgba(215, 196, 249, 0.9) 85.44%
+  );
+
+  left: 0;
+  right: 0;
+  z-index: 20;
+  transition: all 250ms cubic-bezier(0, 0, 0.4, 0.95);
+  border-radius: 24px 24px 0 0 !important;
+  align-items: center;
+  display: flex;
+  background-color: #f4f4f6;
+  flex-direction: column;
+  padding: 0px 20px;
+
+  .closeButton {
+    position: absolute;
+    top: 11px;
+    right: 18px;
+    border-radius: 50%;
+    background: #e8e8eb;
+    padding: 5px;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 590;
+    line-height: 12.57px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .imgContainer {
+    img {
+      max-width: 300px;
+      margin-right: 46px;
+    }
+  }
+  .firstParagraph {
+    font-size: 20px;
+    font-weight: 410;
+    line-height: 23.87px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    span {
+      font-weight: 300;
+      margin-top: 2px;
+    }
+  }
+  .downloadText {
+    font-size: 11px;
+    font-weight: 410;
+    line-height: 13.13px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #8c8c90;
+    margin-top: 5px;
+  }
+  .downloadButton {
+    background: #746bcb;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0px 14px;
+    padding: 8px;
+    p {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 490;
+      margin-left: 5px;
+      line-height: 20.29px;
+      text-align: center;
+      margin-bottom: 6px;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  }
+  .downloadDes {
+    color: #8c8c90;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+
+.createModalOpen {
+  top: calc(100vh - 435px);
+}
+
 @media only screen and (max-width: 420px) {
   #footer .formatSelection .formatSelectorButtonContainer {
     gap: 15px;

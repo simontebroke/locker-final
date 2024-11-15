@@ -83,7 +83,10 @@ function Startpage() {
   };
 
   const [modalClassName, setModalClassName] = useState("modal");
+  const [finishModalClassName, setFinishModalClassName] =
+    useState("finishModal");
   const [overlayClassName, setOverlayClassName] = useState("");
+  const [finishOverlayClassName, setFinishOverlayClassName] = useState("");
 
   function toggleModal() {
     if (modalClassName === "modal") {
@@ -95,11 +98,29 @@ function Startpage() {
     }
   }
 
+  function toggleFinishModal() {
+    if (
+      isUploaded &&
+      selectedStyleButton &&
+      selectedButton &&
+      selectedLanguageButton
+    ) {
+      if (finishModalClassName === "finishModal") {
+        setFinishModalClassName("finishModal createModalOpen");
+        setFinishOverlayClassName("finishOverlay");
+      } else {
+        setFinishModalClassName("finishModal");
+        setFinishOverlayClassName("");
+      }
+    }
+  }
+
   return (
     <>
       <div className="topContainer">
         <h1 className="topContainerHeading">Locker</h1>
         <button
+          onClick={toggleFinishModal}
           className={`topContainerButton createButton ${
             isUploaded &&
             selectedStyleButton &&
@@ -253,6 +274,28 @@ function Startpage() {
             </div>
           </>
         )}
+      </div>
+
+      <div className={finishOverlayClassName} onClick={toggleFinishModal} />
+      <div className={finishModalClassName}>
+        <button className="closeButton" onClick={toggleFinishModal}>
+          <img src="/x.svg" alt="x" />
+        </button>
+        <div className="imgContainer">
+          <img src="./bdrprs.png" alt="Result" />
+        </div>
+        <p className="firstParagraph">
+          Your Presentation <br />
+          <span>is ready</span>
+        </p>
+        <p className="downloadText">Download now</p>
+        <button className="downloadButton">
+          <img src="/cloud.svg" alt="Download" />
+          <p className="downloadText">Download</p>
+        </button>
+        <p className="downloadDes">
+          Your pdf document has been transformed into a brand new presentation.
+        </p>
       </div>
     </>
   );
