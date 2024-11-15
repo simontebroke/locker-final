@@ -278,10 +278,10 @@ function Startpage() {
 
       <div className={finishOverlayClassName} onClick={toggleFinishModal} />
       <div className={finishModalClassName}>
-        <button className="closeButton" onClick={toggleFinishModal}>
-          <img src="/x.svg" alt="x" />
-        </button>
         <div className="fixedContainer">
+          <button className="closeButton" onClick={toggleFinishModal}>
+            <img src="/x.svg" alt="x" />
+          </button>
           <div className="imgContainer">
             <img src="./bdrprs.png" alt="Result" />
           </div>

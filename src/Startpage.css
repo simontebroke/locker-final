@@ -401,7 +401,7 @@ body {
 }
 .finishModal .fixedContainer {
   width: calc(100vw - 40px);
-  position: fixed;
+  position: relative;
   bottom: 16px;
 }
 
