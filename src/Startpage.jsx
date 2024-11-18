@@ -18,6 +18,8 @@ function Startpage() {
 
   const [isUploaded, setIsUploaded] = useState(false);
 
+  let preview;
+
   const buttons = [
     { id: 1, text: "Presentation" },
     { id: 2, text: "Flyer" },
@@ -25,6 +27,10 @@ function Startpage() {
     { id: 4, text: "Worksheet" },
     { id: 5, text: "Brochure" },
   ];
+
+  const selectedFormat = buttons.find(
+    (button) => button.id === selectedButton
+  )?.text;
 
   const styleButtons = [
     { id: 1, text: "Business" },
@@ -133,6 +139,11 @@ function Startpage() {
           Create
         </button>
       </div>
+      <section id="previewSection">
+        <div className="imgContainer">
+          <img src="/startingimage.png" alt="Preview" />
+        </div>
+      </section>
       <section id="footer">
         <div className="formatSelection">
           <h2 className="formatSelectorText">Choose your format</h2>
@@ -185,7 +196,7 @@ function Startpage() {
               toggleModal();
             }}
           >
-            <div className="svgContainer">
+            <div className="svgContainer styleSvg">
               <img src="/stylesparkles.svg" alt="Style" />
             </div>
             <div className="uploadTextContainer">
